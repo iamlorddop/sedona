@@ -1,0 +1,82 @@
+@use 'sass:math'
+
+@function rem($value, $delimeter: 16)
+  @return math.div($value, $delimeter) * 1rem
+
+@function calc-between-width($width-start, $value-start, $width-end, $value-end)
+  @return calc(#{$value-start} * 1px + (#{$value-end} - #{$value-start}) * (100vw - #{$width-start} * 1px) / (#{$width-end} - #{$width-start}))
+
+/* reset */
+*
+  padding: 0
+  margin: 0
+  border: 0
+
+*, *:before, *:after
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+a:focus, a:active
+  outline: none
+
+nav, footer, header, aside
+  display: block
+
+html, body
+  height: 100%
+  width: 100%
+
+input, button, textarea
+  font-family: inherit
+
+input::-ms-clear
+  display: none
+
+button
+  cursor: pointer
+
+button::-moz-focus-inner
+  padding: 0
+  border: 0
+
+a, a:visited
+  text-decoration: none
+
+a:hover
+  text-decoration: none
+
+ul li
+  list-style: none
+
+img
+  vertical-align: top
+
+h1, h2, h3, h4, h5, h6
+  font-size: inherit
+  font-weight: inherit
+
+input[type=text]::-ms-clear
+  display: none
+  width: 0
+  height: 0
+
+input[type=text]::-ms-reveal
+  display: none
+  width: 0
+  height: 0
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration
+  display: none
+
+html
+  font-size: calc-between-width(1600, 16, 1920, 19.2)
+
+body
+  font-size: 1rem
+  position: relative
+  line-height: 1.6
+  background: #F2F2F2
+  overflow-x: hidden
