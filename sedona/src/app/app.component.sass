@@ -77,7 +77,9 @@ html
 body
   font-size: 1rem
   position: relative
+  font-family: "PT Sans", sans-serif
   line-height: 1.6
+  text-transform: uppercase
   background: #F2F2F2
   overflow-x: hidden
 
@@ -91,8 +93,112 @@ body
   flex: 1 1 auto
 
 .container
-  padding: 0 20px
   margin: 0 auto
-  max-width: 1140px
+  max-width: rem(1140)
   background: #fff
   box-shadow: rem(0) rem(5) rem(15) rgba(0, 1, 1, 0.2)
+
+.header
+  padding: 0 rem(20)
+  position: relative
+  display: flex
+  justify-content: space-between
+
+.header
+  color: #000
+  li
+    margin: rem(15) rem(67)
+    display: inline-block
+    font-size: rem(14)
+    font-weight: 700
+    a
+      color: inherit
+      transition: all .3s ease 0s
+      &:hover
+        color: #81B3D2
+      &:focus
+        opacity: 30%
+      &:active
+        color: #766357
+  .logo
+    position: absolute
+    top: 0
+    left: 50%
+    width: rem(138)
+    height: rem(70)
+    transform: translate(-50%)
+    img
+      width: rem(138)
+      height: rem(70)
+
+.title
+  font-size: rem(21)
+  line-height: rem(26)
+  font-weight: 700
+
+.text
+  font-size: rem(14)
+  font-weight: 400
+
+.welcome
+  text-align: center
+  .welcome__image
+    width: 100%
+  .sedona__is
+    padding: rem(42) 0 rem(51) 0
+    .title
+      margin-bottom: rem(16)
+
+.inform__img
+  display: flex
+  .inform__img-text
+    padding: rem(47) rem(49) rem(54)
+    text-align: center
+    color: #fff
+    background: #81B3D2
+  img
+    width: 100%
+
+.text__num
+  margin: rem(25) 0 rem(23)
+
+.inform__flex
+  padding: rem(60) rem(20) rem(82)
+  display: flex
+  justify-content: space-around
+  .inform__flex-item
+    text-align: center
+    .title__m
+      margin: rem(28) 0 rem(25)
+    .inform__flex-img
+      width: rem(72)
+      height: rem(72)
+
+.gray
+  background: #EEEEEE
+
+.sec__form
+  padding: rem(58) 0 0
+  text-align: center
+  .text
+    margin: rem(48) 0
+  .btntoform
+    width: rem(568)
+    height: rem(86)
+    color: #fff
+    text-transform: uppercase
+    font-weight: 700
+    font-size: rem(21)
+    background: #766357
+    transition: all .3s ease 0s
+    &:hover
+      background: #604E43
+    &:focus
+      color: rgba(255, 255, 255, 0.3)
+      background: #503E33
+
+.map
+  height: rem(594)
+  iframe
+    width: 100%
+    height: 100%
