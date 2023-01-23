@@ -115,6 +115,18 @@ body
     display: inline-block
     font-size: rem(14)
     font-weight: 700
+    button
+      background: none
+      font-size: inherit
+      font-weight: 700
+      text-transform: uppercase
+      transition: all .3s ease 0s
+      &:hover
+        color: #81B3D2
+      &:focus
+        opacity: 30%
+      &:active
+        color: #766357
     a
       color: inherit
       transition: all .3s ease 0s
@@ -182,8 +194,11 @@ body
   background: #EEEEEE
 
 .sec__form
+  position: relative
   padding: rem(58) 0 0
   text-align: center
+  background: #fff
+  z-index: 3
   .text
     margin: rem(48) 0
   .btntoform
@@ -200,6 +215,52 @@ body
     &:focus
       color: rgba(255, 255, 255, 0.3)
       background: #503E33
+
+.search__form
+  position: absolute
+  bottom: -119.5%
+  left: 50%
+  padding: rem(55)
+  background: #FFFFFF
+  box-shadow: 0 rem(7) rem(15) rgba(0, 1, 1, 0.15)
+  text-align: left
+  z-index: -1
+  transform: translate(-50%)
+  .search__form-flex
+    display: flex
+    justify-content: space-between
+    gap: rem(40)
+  .search__form-input__block
+    margin-bottom: rem(30)
+    display: flex
+    align-items: center
+  label
+    margin-right: rem(10)
+    font-weight: 700
+    font-size: rem(14)
+
+.search__form-button
+  width: 100%
+  height: rem(58)
+  font-size: rem(21)
+  font-weight: 700
+  color: #fff
+  text-transform: uppercase
+  background: #81B3D2
+  &:hover
+    background: #669EC0
+  &:active
+    color: rgba(255, 255, 255, 0.3)
+    background: #5496BD
+
+.search__form-input
+  padding: rem(6) rem(12)
+  width: rem(316)
+  height: rem(38)
+  background: #F2F2F2
+
+.input-peoples
+  width: rem(114)
 
 .map
   height: rem(594)

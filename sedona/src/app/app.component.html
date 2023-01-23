@@ -4,15 +4,15 @@
       <header class="header">
         <nav>
           <ul>
-            <li><a href="#" class="nav__item">Информация</a></li>
-            <li><a href="#" class="nav__item">Фото и видео</a></li>
+            <li><button class="nav__item" (click)="goScroll(inform)">Информация</button></li>
+            <li><a href="#" class="nav__item" >Фото и видео</a></li>
           </ul>
         </nav>
         <a href="#" class="logo"><img src="../assets/img/logo.svg" alt="logo"></a>
         <nav>
           <ul>
-            <li><a href="#" class="nav__item">Карта штата</a></li>
-            <li><a href="#" class="nav__item">Гостиницы</a></li>
+            <li><button class="nav__item" (click)="goScroll(map)">Карта штата</button></li>
+            <li><a href="#" class="nav__item" >Гостиницы</a></li>
           </ul>
         </nav>
       </header>
@@ -27,7 +27,7 @@
           </div>
         </section>
 
-        <section class="inform">
+        <section class="inform" #inform>
           <div class="inform__img">
             <div class="inform__img-text">
               <h2 class="title">Настоящий <br>городок</h2>
@@ -94,9 +94,30 @@
           <h2 class="title">Заинтересовались?</h2>
           <p class="text">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <button class="btntoform">ПОИСК ГОСТИНИЦЫ В седоне</button>
+          <form action="#" class="search__form" id="searchform">
+            <div class="search__form-input__block">
+              <label for="datefrom">Дата заезда:</label>
+              <input type="date" id="datefrom" class="search__form-input">
+            </div>
+            <div class="search__form-input__block">
+              <label for="dateto">Дата выезда:</label>
+              <input type="date" id="dateto" class="search__form-input">
+            </div>
+            <div class="search__form-flex">
+              <div class="search__form-input__block">
+                <label for="adult">Взрослые:</label>
+                <input type="number" id="adult" name="adult" class="search__form-input input-peoples" min="1">
+              </div>
+              <div class="search__form-input__block">
+                <label for="child">Дети:</label>
+                <input type="number" id="child" name="child" class="search__form-input input-peoples" min="1">
+              </div>
+            </div>
+            <button class="search__form-button">Найти</button>
+          </form>
         </section>
 
-        <section class="sec__map">
+        <section class="sec__map" #map>
           <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d38249.72247565684!2d45.016678399999996!3d53.18901760000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sru!4v1674402450569!5m2!1sen!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
