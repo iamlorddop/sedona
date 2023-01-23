@@ -221,6 +221,8 @@ body
   bottom: -119.5%
   left: 50%
   padding: rem(55)
+  display: none
+  width: rem(568)
   background: #FFFFFF
   box-shadow: 0 rem(7) rem(15) rgba(0, 1, 1, 0.15)
   text-align: left
@@ -233,6 +235,7 @@ body
   .search__form-input__block
     margin-bottom: rem(30)
     display: flex
+    justify-content: space-between
     align-items: center
   label
     margin-right: rem(10)
@@ -255,9 +258,20 @@ body
 
 .search__form-input
   padding: rem(6) rem(12)
-  width: rem(316)
+  width: rem(346)
   height: rem(38)
+  font-weight: 700
+  font-size: rem(14)
+  text-transform: uppercase
   background: #F2F2F2
+  outline: #F2F2F2 solid rem(2)
+  transition: all .3s ease 0s
+  &:hover
+    background: #EBEBEB
+    outline: #EBEBEB solid rem(2)
+  &:focus
+    background: #ffffff
+    outline: #E5E5E5 solid rem(2)
 
 .input-peoples
   width: rem(114)

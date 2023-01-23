@@ -93,8 +93,8 @@
         <section class="sec__form">
           <h2 class="title">Заинтересовались?</h2>
           <p class="text">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <button class="btntoform">ПОИСК ГОСТИНИЦЫ В седоне</button>
-          <form action="#" class="search__form" id="searchform">
+          <button class="btntoform" (click)="popupView(searchform)">ПОИСК ГОСТИНИЦЫ В седоне</button>
+          <form action="#" class="search__form" id="searchform" #searchform>
             <div class="search__form-input__block">
               <label for="datefrom">Дата заезда:</label>
               <input type="date" id="datefrom" class="search__form-input">

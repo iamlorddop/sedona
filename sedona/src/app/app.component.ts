@@ -9,4 +9,8 @@ export class AppComponent {
   goScroll(target: HTMLElement) {
     target.scrollIntoView({behavior: "smooth"});
   }
+
+  popupView(target: HTMLElement) {
+    target.style.display = 'block'
+  }
 }
